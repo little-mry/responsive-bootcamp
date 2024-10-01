@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    place-items: center;
+}
+
+
+.box {
+    background-color: aqua;
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+    }
+}
